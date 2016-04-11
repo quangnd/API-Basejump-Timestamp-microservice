@@ -1,0 +1,15 @@
+{
+  "name": "api-basejump-timestamp-microservice",
+  "version": "1.0.0",
+  "description": "A API projects from FCC https://www.freecodecamp.com/challenges/timestamp-microservice",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "quangnd",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "moment": "^2.12.0"
+  }
+}
