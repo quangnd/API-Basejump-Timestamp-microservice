@@ -1,0 +1,48 @@
+<!doctype HTML>
+<html>
+  <head><title>API Basejump: Timestamp microservice</title></head>
+  <style>
+  	div {
+  		margin-left: 20px;
+  	}
+  	span {
+  		font-size:20px;
+  		color: green;
+  	}
+  </style>
+  <body>
+     <div>
+    	 <h1>API Basejump: Timestamp microservice by Mun</h1>
+	</div>	
+     <div>
+     	<quote style="font-size:25px;line-height: 35px;">
+     		User stories:
+     		<ol>
+     			<li>I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)</li>
+     			<li>If it does, it returns both the Unix timestamp and the natural language form of that date.</li>
+     			<li>If it does not contain a date or Unix timestamp, it returns null for those properties.</li>
+     		</ol>
+		
+     	</quote>
+     </div>
+
+     <div>
+     	<h2>Example usage:</h2>
+     	<span>
+     		{{url}}/December%2015,%202015
+    		
+     	</span>
+     	<br/>
+     	<span>
+     		{{url}}/1450137600
+     	</span>
+     </div>
+
+     <div>
+     	<h2>Example output:</h2>
+     	<span>
+     		{ "unix": 1450137600, "natural": "December 15, 2015" }
+     	</span>
+     </div>
+  </body>
+</html>
