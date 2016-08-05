@@ -16,3 +16,8 @@ User stories:
 `{ "unix": 1450137600, "natural": "December 15, 2015" }`
 
 Clone and play around ;)
+
+--
+Live demo
+
+https://timestamp-mun.herokuapp.com/
