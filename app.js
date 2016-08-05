@@ -20,7 +20,7 @@ app.use('/:dateString', function(req,res){
 	var urlParam = req.params.dateString;
 	var date;
 	var dateFormat = "MMMM D, YYYY";
-	var timeStamp = { unix: "", natural: ""};
+	var timeStamp = { unix: null, natural: null};
 
 	if (urlParam.match(/\D/)) { //	Matches any nondigit
 		date = moment(urlParam, dateFormat);
