@@ -4,7 +4,7 @@ var engines = require('consolidate')
 var bodyParser = require('body-parser')
 
 var app = express()
-var port = process.env.PORT | 3000;
+var port = process.env.PORT || 3000;
 
 app.engine('html', engines.nunjucks)
 app.set('view engine', 'html');
@@ -40,5 +40,5 @@ app.use('/:dateString', function(req,res){
 })
 
 app.listen(port, function(){
-	console.log('Express is running at port %d', app.get('port'));
+	console.log('Express is running at port ' + port);
 })
