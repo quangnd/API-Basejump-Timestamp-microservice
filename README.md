@@ -8,6 +8,7 @@ User stories:
 **Example usage**
 
 `http://localhost:3000/December%2015,%202015`
+
 `http://localhost:3000/1450137600`
 
 **Example output**
