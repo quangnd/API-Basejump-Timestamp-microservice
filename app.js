@@ -7,7 +7,7 @@ var app = express()
 
 app.engine('html', engines.nunjucks)
 app.set('view engine', 'html');
-app.set('port', (process.env.port | 3000))
+app.set('port', (process.env.PORT | 3000))
 app.set('views', __dirname + '/');
 app.use(bodyParser.urlencoded({ extended: true })); 
 
@@ -15,19 +15,19 @@ app.get('/', function(req,res,next) {
 	res.render('index', {url: req.protocol + '://' + req.get('host') });
 })
 
-app.use(function(req,res){
-	var urlParam = decodeURIComponent(req.path).replace(/\//, "");
+app.use('/:dateString', function(req,res){
+	//var urlParam = decodeURIComponent(req.path).replace(/\//, "");
+	var urlParam = req.params.dateString;
 	var date;
 	var dateFormat = "MMMM D, YYYY";
 	var timeStamp = { unix: "", natural: ""};
 
-	if (urlParam.match(/\D/)) { 
+	if (urlParam.match(/\D/)) { //	Matches any nondigit
 		date = moment(urlParam, dateFormat);
 		if (date.format(dateFormat) !== urlParam) {
 			date = moment.invalid();
 		}
 	} else {
-		console.log("Url param is number");
 		date = moment(urlParam, "X"); //Unix timestamp
 	}
 

@@ -4,6 +4,7 @@
   "description": "A API projects from FCC https://www.freecodecamp.com/challenges/timestamp-microservice",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "quangnd",
